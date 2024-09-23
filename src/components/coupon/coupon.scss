@@ -1,0 +1,48 @@
+@import "../../utilities/variables";
+
+.coupon {
+  &-content {
+    bottom: 0;
+    right: 0;
+    width: $coupon-width;
+    height: auto;
+    max-height: $coupon-max-height;
+    background-color: $header-bg-primary;
+    border: 2px solid $coupon-border-color;
+    color: $text-white;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 100;
+
+    .event {
+      border-bottom: 1px solid $coupon-border-color;
+      padding: 1rem;
+
+      .coupon-match {
+        font-size: 1rem;
+        margin-right: 1rem;
+        display: flex;
+        gap: 1rem;
+        .mbs {
+          color: $text-red;
+        }
+      }
+    }
+
+    .total {
+      padding: 1rem;
+      font-size: 1rem;
+      background-color: $header-bg-primary;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .coupon {
+    &-content {
+      width: $coupon-width - 10rem;
+      max-height: $coupon-max-height - 10rem;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../utilities/variables";
+
+.table-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr repeat(17, 0.45fr);
+  border-bottom: $table-border;
+  height: 3rem;
+  background-color: $bg-primary;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-right: $table-border;
+    padding-left: 0.5rem;
+    &.selected {
+      background-color: $selected-bg-primary;
+    }
+    &.pointer {
+      cursor: pointer;
+    }
+
+    &.match-info {
+      & > div {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

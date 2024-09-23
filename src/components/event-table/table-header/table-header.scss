@@ -1,0 +1,20 @@
+@import "../../../utilities/variables";
+
+.table-row {
+  &.header {
+    height: 4rem;
+    background-color: $header-bg-primary;
+    position: sticky;
+    color: $text-white;
+  }
+}
+.title {
+  font-weight: bold;
+  font-size: 1rem;
+
+  .title-number {
+    color: $text-red;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+  }
+}
